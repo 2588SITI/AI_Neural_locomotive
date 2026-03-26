@@ -34,80 +34,80 @@ interface ComponentItem {
 const components: ComponentItem[] = [
   {
     id: "1",
-    name: "Line Scan Cameras",
+    name: "Elite Line Scan Camera",
     brand: "Basler",
-    modelNumber: "racer raL2048-48gm",
+    modelNumber: "racer raL8192-80km (8K)",
     origin: "Germany",
-    price: "₹2,50,000",
-    use: "High-speed continuous imaging of moving objects.",
-    details: "The Basler racer series is the industry standard for high-speed line scan applications. The raL2048-48gm offers 2k resolution with a GigE interface, perfect for capturing fine details of trains moving at 100+ km/h.",
+    price: "₹6,50,000",
+    use: "Ultra-high resolution imaging at 80kHz.",
+    details: "The raL8192-80km is the pinnacle of line scan technology. With 8K resolution and Camera Link interface, it captures microscopic defects on trains traveling at speeds exceeding 250 km/h with crystal clarity.",
     icon: <Camera className="w-6 h-6" />,
-    color: "bg-blue-500",
+    color: "bg-blue-600",
     imageUrl: "https://www.baslerweb.com/fp-1649844444/media/main/products/cameras/line-scan-cameras/racer/basler_racer_raL2048-48gm_front_left.png"
   },
   {
     id: "2",
-    name: "Strobe Lighting",
+    name: "High-Power Strobe Array",
     brand: "CCS",
-    modelNumber: "LDR2-90-SW2 / PD3 Controller",
+    modelNumber: "LDR2-120-SW2 / High-Output Controller",
     origin: "Japan",
-    price: "₹85,000",
-    use: "High-intensity pulsed illumination for clear capture.",
-    details: "CCS is the global leader in machine vision lighting. The LDR2 series paired with a PD3 strobe controller ensures that the camera receives enough light in microseconds to 'freeze' high-speed motion.",
+    price: "₹2,50,000",
+    use: "Ultra-bright synchronized illumination.",
+    details: "Custom high-power LED array designed for 8K imaging. Provides blinding intensity for microsecond durations, ensuring zero motion blur even at the highest capture frequencies.",
     icon: <Zap className="w-6 h-6" />,
     color: "bg-yellow-500",
     imageUrl: "https://www.ccs-grp.com/products/series/1/images/main.jpg"
   },
   {
     id: "3",
-    name: "Edge AI Unit",
+    name: "Dual Edge AI Cluster",
     brand: "NVIDIA Jetson AGX",
-    modelNumber: "Orin 64GB Developer Kit",
+    modelNumber: "Orin 64GB (Dual Redundant Setup)",
     origin: "USA/Global",
-    price: "₹1,80,000",
-    use: "Real-time AI processing at the source.",
-    details: "The AGX Orin is the most powerful AI computer for energy-efficient autonomous machines. It delivers up to 275 TOPS, allowing it to run multiple neural networks in parallel for real-time defect detection.",
+    price: "₹3,60,000",
+    use: "Redundant real-time AI processing.",
+    details: "Two AGX Orin units working in parallel for 100% uptime. If one fails, the other takes over instantly. Delivers a combined 550 TOPS of AI performance for complex multi-model inference.",
     icon: <Cpu className="w-6 h-6" />,
-    color: "bg-green-500",
+    color: "bg-green-600",
     imageUrl: "https://www.nvidia.com/content/dam/en-zz/Solutions/embedded/jetson-agx-orin-developer-kit-625-ud@2x.png"
   },
   {
     id: "4",
-    name: "Axle Counter",
+    name: "Triple-Redundant Axle Counter",
     brand: "Teknis",
-    modelNumber: "TAC-200 Series",
+    modelNumber: "TAC-300 Elite Series",
     origin: "Australia",
-    price: "₹4,50,000",
-    use: "Detecting and counting train axles for safety.",
-    details: "Teknis TAC-200 is a highly reliable axle counting system used for track vacancy detection. It is SIL-4 certified, ensuring the highest level of safety for railway signaling operations.",
+    price: "₹8,00,000",
+    use: "Fail-safe track vacancy detection.",
+    details: "The TAC-300 is the most advanced axle counter globally. It features triple-modular redundancy (TMR) and is SIL-4 certified, making it virtually impossible for the system to fail or miscount.",
     icon: <Hash className="w-6 h-6" />,
-    color: "bg-red-500",
+    color: "bg-red-600",
     imageUrl: "https://www.teknis.com.au/images/products/axle-counter.jpg"
   },
   {
     id: "5",
-    name: "IP67 Enclosure",
+    name: "Climate-Controlled Enclosure",
     brand: "Rittal",
-    modelNumber: "AX 1038.000 (Compact)",
+    modelNumber: "Stainless Steel AX with Peltier Cooling",
     origin: "Germany",
-    price: "₹45,000",
-    use: "Weatherproof protection for sensitive electronics.",
-    details: "The Rittal AX series offers superior protection with its high-quality seals and robust construction. The 1038.000 model is ideal for housing cameras and AI units in harsh outdoor environments.",
+    price: "₹1,50,000",
+    use: "Active thermal management for electronics.",
+    details: "A stainless steel, IP67 enclosure equipped with active thermoelectric cooling. Maintains a constant 25°C inside, even if the outside desert temperature hits 50°C, extending hardware life significantly.",
     icon: <Shield className="w-6 h-6" />,
-    color: "bg-slate-600",
+    color: "bg-slate-700",
     imageUrl: "https://www.rittal.com/imf/none/5_1234/Rittal_AX_Enclosure_Compact_IP66.jpg"
   },
   {
     id: "6",
-    name: "5G Comm Module",
+    name: "Industrial 5G/Fiber Gateway",
     brand: "Cisco",
-    modelNumber: "IR1101 Industrial Router",
+    modelNumber: "Catalyst IR8340 Rugged Router",
     origin: "USA",
-    price: "₹65,000",
-    use: "Ultra-fast, low-latency data transmission.",
-    details: "The Cisco IR1101 is a modular industrial router designed for mission-critical IoT. With a 5G pluggable module, it provides the high-speed connectivity required for remote monitoring and data offloading.",
+    price: "₹1,20,000",
+    use: "Mission-critical high-bandwidth networking.",
+    details: "The IR8340 supports both high-speed Fiber and 5G failover. It ensures that your high-resolution data reaches the control room without interruption, regardless of local network conditions.",
     icon: <Radio className="w-6 h-6" />,
-    color: "bg-indigo-500",
+    color: "bg-indigo-600",
     imageUrl: "https://www.cisco.com/c/en/us/products/routers/industrial-routers/index/_jcr_content/Grid/category_cards/layout-grid-0/column-0/tile.img.png"
   }
 ];
@@ -253,11 +253,113 @@ export default function App() {
           </div>
         </section>
 
+        {/* Comparison Section */}
+        <section className="mt-20">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="p-2 bg-blue-600 rounded-lg text-white">
+              <Cpu className="w-6 h-6" />
+            </div>
+            <h3 className="text-2xl font-bold text-slate-800">Edge AI vs. Centralized Server</h3>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Jetson AGX Orin */}
+            <div className="bg-white rounded-3xl border-2 border-green-100 p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex justify-between items-start mb-6">
+                <div>
+                  <span className="px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-wider">Recommended for Trackside</span>
+                  <h4 className="text-2xl font-bold text-slate-900 mt-3">NVIDIA Jetson AGX Orin</h4>
+                  <p className="text-slate-500 text-sm">64GB Developer Kit</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-xs font-bold text-slate-400 uppercase">AI Power</p>
+                  <p className="text-xl font-bold text-green-600">275 TOPS</p>
+                </div>
+              </div>
+              
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 p-1 bg-green-50 rounded-full text-green-600">
+                    <ChevronRight className="w-4 h-4" />
+                  </div>
+                  <p className="text-slate-600 text-sm"><span className="font-bold text-slate-800">Low Power:</span> Consumes only 15W-60W. Perfect for solar or remote battery power.</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 p-1 bg-green-50 rounded-full text-green-600">
+                    <ChevronRight className="w-4 h-4" />
+                  </div>
+                  <p className="text-slate-600 text-sm"><span className="font-bold text-slate-800">Rugged:</span> Small enough to fit in IP67 enclosures. Handles vibration and heat.</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 p-1 bg-green-50 rounded-full text-green-600">
+                    <ChevronRight className="w-4 h-4" />
+                  </div>
+                  <p className="text-slate-600 text-sm"><span className="font-bold text-slate-800">Real-time:</span> Processes images instantly at the source, reducing 5G data costs.</p>
+                </li>
+              </ul>
+              
+              <div className="p-4 bg-green-50 rounded-2xl border border-green-100">
+                <p className="text-green-800 text-sm font-bold flex items-center gap-2">
+                  <Info className="w-4 h-4" /> Best for: On-site defect detection & axle counting.
+                </p>
+              </div>
+            </div>
+
+            {/* NextServer-X 2U */}
+            <div className="bg-white rounded-3xl border-2 border-slate-100 p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex justify-between items-start mb-6">
+                <div>
+                  <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold uppercase tracking-wider">Recommended for Control Room</span>
+                  <h4 className="text-2xl font-bold text-slate-900 mt-3">NextServer-X 2U</h4>
+                  <p className="text-slate-500 text-sm">Rackmount Enterprise Server</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-xs font-bold text-slate-400 uppercase">Compute</p>
+                  <p className="text-xl font-bold text-slate-600">Multi-GPU</p>
+                </div>
+              </div>
+              
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 p-1 bg-slate-50 rounded-full text-slate-600">
+                    <ChevronRight className="w-4 h-4" />
+                  </div>
+                  <p className="text-slate-600 text-sm"><span className="font-bold text-slate-800">Massive Power:</span> Can handle 100+ camera streams simultaneously from multiple sites.</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 p-1 bg-slate-50 rounded-full text-slate-600">
+                    <ChevronRight className="w-4 h-4" />
+                  </div>
+                  <p className="text-slate-600 text-sm"><span className="font-bold text-slate-800">Storage:</span> TBs of NVMe storage for long-term video archiving and training.</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 p-1 bg-slate-50 rounded-full text-slate-600">
+                    <ChevronRight className="w-4 h-4" />
+                  </div>
+                  <p className="text-slate-600 text-sm"><span className="font-bold text-slate-800">Scalable:</span> Easy to upgrade RAM, CPU, and GPUs as your AI models grow.</p>
+                </li>
+              </ul>
+              
+              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                <p className="text-slate-800 text-sm font-bold flex items-center gap-2">
+                  <Info className="w-4 h-4" /> Best for: Centralized monitoring & AI model training.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 p-6 bg-blue-50 rounded-2xl border border-blue-100 text-center">
+            <p className="text-blue-900 font-bold">
+              Ultimate Verdict: For a "Money is No Object" system, we recommend an <span className="text-blue-600 underline">Elite Hybrid Architecture</span>. Use the Jetson AGX Orin Cluster trackside for zero-latency detection, and link them to a NextServer-X 2U Elite in the control room for massive data archiving and global AI analytics.
+            </p>
+          </div>
+        </section>
+
         {/* Summary Table */}
         <section className="mt-20">
           <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
             <div className="px-6 py-4 bg-slate-50 border-b border-slate-200">
-              <h3 className="font-bold text-slate-800">Quick Reference Table</h3>
+              <h3 className="font-bold text-slate-800">Elite System Hardware Summary</h3>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
@@ -283,8 +385,8 @@ export default function App() {
                 </tbody>
                 <tfoot>
                   <tr className="bg-slate-50/80">
-                    <td colSpan={4} className="px-6 py-4 font-bold text-slate-800 text-right">Total Estimated Hardware Cost:</td>
-                    <td className="px-6 py-4 text-right font-mono font-black text-blue-600 text-lg">₹10,85,000</td>
+                    <td colSpan={4} className="px-6 py-4 font-bold text-slate-800 text-right">Total Elite Hardware Investment:</td>
+                    <td className="px-6 py-4 text-right font-mono font-black text-blue-600 text-lg">₹23,30,000</td>
                   </tr>
                 </tfoot>
               </table>
