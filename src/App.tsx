@@ -14,8 +14,11 @@ import {
   Radio, 
   Info,
   ExternalLink,
-  ChevronRight
+  ChevronRight,
+  Download
 } from "lucide-react";
+import jsPDF from 'jspdf';
+import autoTable from 'jspdf-autotable';
 
 interface ComponentItem {
   id: string;
@@ -113,6 +116,68 @@ const components: ComponentItem[] = [
 ];
 
 export default function App() {
+  const handleDownloadPDF = () => {
+    const doc = new jsPDF();
+    
+    // Add title
+    doc.setFontSize(20);
+    doc.setTextColor(15, 23, 42); // slate-900
+    doc.text('Industrial Monitoring System', 14, 22);
+    
+    // Add subtitle
+    doc.setFontSize(11);
+    doc.setTextColor(100, 116, 139); // slate-500
+    doc.text('Elite Technical Specifications & Hardware Investment Analysis', 14, 30);
+    
+    // Add date
+    doc.setFontSize(10);
+    doc.text(`Generated on: ${new Date().toLocaleDateString()}`, 14, 38);
+    
+    // Add components table
+    const tableData = components.map(item => [
+      item.name,
+      item.modelNumber,
+      item.brand,
+      item.origin,
+      item.price
+    ]);
+    
+    autoTable(doc, {
+      startY: 45,
+      head: [['Component', 'Model Number', 'Brand', 'Origin', 'Price']],
+      body: tableData,
+      theme: 'grid',
+      headStyles: { fillColor: [37, 99, 235], textColor: [255, 255, 255], fontStyle: 'bold' }, // blue-600
+      styles: { fontSize: 9, cellPadding: 5 },
+      columnStyles: {
+        4: { halign: 'right', fontStyle: 'bold' }
+      }
+    });
+    
+    // Add total cost
+    const finalY = (doc as any).lastAutoTable.finalY + 15;
+    doc.setFontSize(14);
+    doc.setTextColor(37, 99, 235); // blue-600
+    doc.setFont('helvetica', 'bold');
+    doc.text('Total Elite Hardware Investment: ₹23,30,000', 14, finalY);
+    
+    // Add verdict
+    doc.setFontSize(11);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(51, 65, 85); // slate-700
+    const verdictText = 'Ultimate Verdict: For a "Money is No Object" system, we recommend an Elite Hybrid Architecture. Use the Jetson AGX Orin Cluster trackside for zero-latency detection, and link them to a NextServer-X 2U Elite in the control room for massive data archiving and global AI analytics.';
+    const splitVerdict = doc.splitTextToSize(verdictText, 180);
+    doc.text(splitVerdict, 14, finalY + 15);
+    
+    // Footer
+    doc.setFontSize(9);
+    doc.setTextColor(148, 163, 184); // slate-400
+    doc.text('Confidential Technical Document - Industrial Monitoring Solutions v1.0.4', 14, 285);
+    
+    // Save the PDF
+    doc.save('Industrial_System_Elite_Report.pdf');
+  };
+
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans selection:bg-blue-100">
       {/* Header */}
@@ -126,7 +191,13 @@ export default function App() {
             <p className="text-slate-500 text-sm mt-1">Component Analysis & Technical Specifications</p>
           </div>
           <div className="hidden md:flex items-center gap-4 text-sm font-medium text-slate-600">
-            <span className="flex items-center gap-1"><Info className="w-4 h-4" /> Technical Guide</span>
+            <button 
+              onClick={handleDownloadPDF}
+              className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700 transition-all shadow-sm hover:shadow-md active:scale-95 cursor-pointer"
+            >
+              <Download className="w-4 h-4" />
+              Download PDF Report
+            </button>
             <span className="w-px h-4 bg-slate-200"></span>
             <span className="text-blue-600">v1.0.4</span>
           </div>
